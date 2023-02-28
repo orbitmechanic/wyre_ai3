@@ -1,0 +1,54 @@
+.signup-widget {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 24px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .signup-widget h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .signup-widget form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signup-widget label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .signup-widget input[type="email"],
+  .signup-widget input[type="password"],
+  .signup-widget input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  
+  .signup-widget button[type="submit"] {
+    padding: 8px;
+    background-color: #0080ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signup-widget button[type="submit"]:hover {
+    background-color: #005cbf;
+  }
+  

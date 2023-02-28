@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './SignUp.css';
 
 const SignUp: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -61,7 +62,7 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="signup-widget">
       <h1>Sign up for our website</h1>
       <form onSubmit={handleSubmit}>
         <div>
