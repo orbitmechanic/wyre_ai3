@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './SignUp.css';
@@ -68,6 +68,8 @@ const SignUp: React.FC = () => {
       // TODO: Handle error creating user
     } 
   };
+
+  console.log('Sign up page rendered');
 
   return (
     <div className="signup-widget">
@@ -271,7 +273,10 @@ const SignUp: React.FC = () => {
             </select>
           </div>
         </div>      
-        <button type="submit">Sign up</button>
+        <button type="submit">Creeate Account</button>
+        <div className="log-in-link">
+          Already have an account? <Link to="/login">Log in</Link>
+        </div>
       </form>
     </div>
   );
