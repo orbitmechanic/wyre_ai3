@@ -3,6 +3,7 @@ form {
   flex-direction: column;
   max-width: 400px;
   margin: 0 auto;
+  text-align: center; /* center contents */
 }
 
 form > div {
@@ -37,6 +38,7 @@ form > div > input[type="text"] {
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 16px;
+  text-align: center; /* center contents */
 }
 
 .address-block > label {
@@ -54,14 +56,42 @@ form > div > input[type="text"] {
   font-weight: normal;
 }
 
-.address-block > div > input[type="text"] {
-  padding: 8px;
+.address-block {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  width: 100%;
+  padding: -10px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px); /* subtract horizontal padding and border */
 }
 
 .address-block > div:nth-of-type(2) > input[type="text"] {
   margin-top: 8px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form-col {
+  width: 33%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  text-align: center; /* center contents */
+}
+
+.password-form-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center; /* center contents */
+}
+
+.password-form-col {
+  width: 50%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  text-align: center; /* center contents */
 }
