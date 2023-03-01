@@ -1,0 +1,53 @@
+.login-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-form {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .login-header {
+    text-align: center;
+  }
+
+  .signup-link {
+    text-align: center;
+  }
+
+  .form-col {
+    margin-bottom: 16px;
+  }
+  
+  .form-col label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .form-col input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .form-row label {
+    text-align: right;
+    margin-right: 16px;
+  }
+  
+  
