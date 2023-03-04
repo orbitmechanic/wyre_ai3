@@ -52,6 +52,9 @@ const SignUp: React.FC = () => {
           },
           dateOfBirth,
         },
+        "blockchains": [
+          "ALL"
+        ],
         scope: 'TRANSFER',
       }, {
         headers: {

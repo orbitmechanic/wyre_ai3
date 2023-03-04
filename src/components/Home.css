@@ -1,46 +1,57 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .widget {
-    background-image: url('../images/tinkerbanklogo.jpg');
-    background-size: cover;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 350px;
-    height: 600px;
-  }
-  
-  .title {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 50px;
-  }
-  
-  .buttons {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-  }
-  
-  .button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-widget {
+  background-image: url('../images/tinkerbanklogo.jpg');
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 350px;
+  height: 600px;
+}
+
+.home-title {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.home-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.home-button.profile {
+  /* additional styles for profile button */
+}
+
+.home-button.signup {
+  /* additional styles for signup button */
+}
+
+.home-button.onboarding {
+  /* additional styles for onboarding button */
+}
