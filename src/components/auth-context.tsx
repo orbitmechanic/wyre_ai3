@@ -1,15 +1,17 @@
-import React, { createContext, useState, ReactNode } from 'react';
+import React, { useState } from 'react';
 
+// Define the shape of the authentication context
 interface AuthContextType {
   isLoggedIn: boolean;
   session: any;
   user: any;
-  login: (session: any) => void;
+  login: (sessionData: any, userData: any) => void;
   logout: () => void;
-  setUser: (user: any) => void;
+  setUser: (userData: any) => void;
 }
 
-const initialAuthContext: AuthContextType = {
+// Initialize default context values
+const defaultAuthContext: AuthContextType = {
   isLoggedIn: false,
   session: null,
   user: null,
@@ -18,26 +20,39 @@ const initialAuthContext: AuthContextType = {
   setUser: () => {},
 };
 
-export const AuthContext = createContext(initialAuthContext);
+// Define the AuthProvider component props
+interface AuthProviderProps {
+  children: React.ReactNode;
+}
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+// Create the authentication context
+export const AuthContext = React.createContext<AuthContextType>(defaultAuthContext);
+
+// Define the AuthProvider component
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [session, setSession] = useState<any>(null);
   const [user, setUser] = useState<any>(null);
 
-  const login = (session: any) => {
+  // Handle user login
+  const handleLogin = (sessionData: any, userData: any) => {
     setIsLoggedIn(true);
-    setSession(session);
+    setSession(sessionData);
+    setUser(userData);
   };
 
-  const logout = () => {
+  // Handle user logout
+  const handleLogout = () => {
     setIsLoggedIn(false);
     setSession(null);
     setUser(null);
   };
 
+  // Pass the authentication context to child components
   return (
-    <AuthContext.Provider value={{ isLoggedIn, session, user, login, logout, setUser }}>
+    <AuthContext.Provider
+      value={{ isLoggedIn, session, user, login: handleLogin, logout: handleLogout, setUser }}
+    >
       {children}
     </AuthContext.Provider>
   );

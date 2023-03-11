@@ -13,7 +13,7 @@ const LogIn = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+  
     try {
       // Authenticate the user with the Wyre API
       const response = await axios.post(
@@ -29,13 +29,14 @@ const LogIn = () => {
           },
         }
       );
-
+  
       // Save the token to local storage
       localStorage.setItem('wyreToken', response.data.token);
-
+  
       // Update the login state and session object
-      login(response.data);
-
+      const { session, user } = response.data;
+      login(session, user);
+  
       // Redirect to the portfolio page
       const nextPathname = location.state?.from || '/portfolio';
       window.location.href = nextPathname;
